@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapper namespace="dao.StudentMapper">
+
+	<select id="getStudent" resultType="model.Student">
+		select * from student where s_id = #{id}
+	</select>
+	
+	<select id="getAll" resultType="model.Student">
+		select * from student
+	</select>
+	
+	<update id="updateStudent">
+		update student set s_name = '张三2' where s_id = #{id}
+	</update>
+	
+</mapper>
